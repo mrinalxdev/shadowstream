@@ -1,0 +1,6 @@
+Django==4.2.7
+djangorestframework==3.14.0
+grpcio==1.59.0
+grpcio-tools==1.59.0
+redis==5.0.1
+protobuf==4.25.1
