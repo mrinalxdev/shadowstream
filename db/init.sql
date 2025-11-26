@@ -1,0 +1,7 @@
+CREATE TABLE events {
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+}
+
+CREATE USER repluser WITH REPLICATION LOGIN PASSWORKD 'replpass';
