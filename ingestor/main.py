@@ -84,7 +84,7 @@ def main():
                 },
                 id = f"{record.commit_time} - {record.lsn}"
             )
-            print(f"✅ Pushed event to Redis Stream: {REDIS_STREAM}")
+            print(f"pushed event to Redis Stream: {REDIS_STREAM}")
 
             
             producer.send(
@@ -93,7 +93,7 @@ def main():
                 key=record.table.encode('utf-8') 
             )
             producer.flush()
-            print(f"✅ Pushed event to Kafka Topic: {KAFKA_TOPIC}")
+            print(f"pushed event to Kafka Topic: {KAFKA_TOPIC}")
 
             return True
     
