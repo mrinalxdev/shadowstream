@@ -1,35 +1,34 @@
 syntax = "proto3";
 
-
 package shadowstream;
 
 service Ingestor {
-    rpc PushChange(ChangeRecord) returns (PushResponse);
+  rpc PushChange(ChangeRecord) returns (PushResponse);
 }
 
 service Replayer {
-    rpc ReplayEvent(ReplayRequest) returns (ReplayResponse);
+  rpc ReplayEvent(ReplayRequest) returns (ReplayResponse);
 }
 
 message ChangeRecord {
-    string lsn = 1;
-    int64 commit_time = 2;
-    string table = 3;
-    string operation = 4;
-    map<string, string> old = 5;
-    map<string, string> new = 6;
+  string lsn = 1;              
+  int64 commit_time = 2;       
+  string table = 3;
+  string operation = 4;        
+  map<string, string> old = 5; 
+  map<string, string> new = 6; 
 }
 
 message PushResponse {
-    bool success = 1;
+  bool success = 1;
 }
 
 message ReplayRequest {
-    string job_id = 1;
-    ChangeRecord event = 2;
-    int64 virtual_time = 3;
+  string job_id = 1;
+  ChangeRecord event = 2;
+  int64 virtual_time = 3;      
 }
 
 message ReplayResponse {
-    bool success = 1;
+  bool success = 1;
 }

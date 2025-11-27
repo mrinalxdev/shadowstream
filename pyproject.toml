@@ -1,13 +1,15 @@
 [project]
-name = "ingestor"
+name = "shadowstream"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "django>=5.2.8",
     "grpcio>=1.76.0",
     "grpcio-tools>=1.76.0",
     "kafka-python>=2.3.0",
     "psycopg2-binary>=2.9.11",
     "redis>=7.1.0",
+    "requests>=2.32.5",
 ]

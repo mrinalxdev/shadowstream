@@ -1,3 +1,4 @@
+# Register your models here.
 
 import redis
 import grpc
@@ -83,4 +84,3 @@ def run_replay_job(modeladmin, request, queryset):
 class ReplayJobAdmin(admin.ModelAdmin):
     list_display = ("id", "start_time", "end_time", "speed_factor", "status")
     actions = [run_replay_job]
-

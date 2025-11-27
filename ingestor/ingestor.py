@@ -1,11 +1,11 @@
-import time
+import time 
 import json
 import redis
 import psycopg2
 from kafka import KafkaProducer
 from psycopg2.extras import LogicalReplicationConnection
 
-from shadowstream_pb2 import ChangeRecord 
+from shadowstream_pb2 import ChangeRecord
 
 KAFKA_BROKER = "kafka:9092"
 KAFKA_TOPIC = "shadowstream.archive"
